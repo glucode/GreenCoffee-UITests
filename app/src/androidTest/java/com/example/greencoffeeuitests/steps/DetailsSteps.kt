@@ -4,6 +4,7 @@ import com.example.greencoffeeuitests.R
 import com.mauriciotogneri.greencoffee.GreenCoffeeSteps
 import com.mauriciotogneri.greencoffee.annotations.Then
 
+@Suppress("unused")
 class DetailsSteps : GreenCoffeeSteps() {
     @Then("^I see the detail screen for '([\\w| ]+)'$")
     fun `iSeeTheDetailScreenFor$`(username: String?) {

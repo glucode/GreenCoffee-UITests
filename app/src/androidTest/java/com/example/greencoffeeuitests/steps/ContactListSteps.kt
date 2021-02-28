@@ -1,6 +1,6 @@
 package com.example.greencoffeeuitests.steps
 
-import androidx.test.espresso.Espresso
+import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.matcher.ViewMatchers
 import com.example.greencoffeeuitests.R
@@ -18,7 +18,7 @@ class ContactListSteps : GreenCoffeeSteps() {
 
     @When("^I select the contact called \'(.+)\'$")
     fun `iSelectTheContactCalled$`(username: String) {
-        Espresso.onView(ViewMatchers.withText(username)).perform(ViewActions.click())
+      onView(ViewMatchers.withText(username)).perform(ViewActions.click())
     }
 
     @Then("^I see an empty contact list$")
